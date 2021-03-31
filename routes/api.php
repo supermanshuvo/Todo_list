@@ -19,4 +19,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get('/',[App\Http\Controllers\ItemController::class,'index'])->name('home');
+Route::get('/',[ItemController::class,'index'])->name('home');
+Route::prefix('/item')->group(function(){
+    Route::post('/store',[ItemController::class,'store']);
+    Route::put('/{id}',[ItemController::class,'update']);
+    Route::delete('/{id}',[ItemController::class,'destroy']);
+});
