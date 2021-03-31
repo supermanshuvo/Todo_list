@@ -38,7 +38,10 @@ class ItemController extends Controller
         $request->validate([
             'name' => 'required',
         ]);
-        
+        $newItem = new Item;
+        $newItem->name = $request->item['name'];
+        $newItem->save();
+        return $newItem;
     }
 
     /**
