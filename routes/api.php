@@ -19,3 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+Route::get('/',[App\Http\Controllers\ItemController::class,'index'])->name('home');
