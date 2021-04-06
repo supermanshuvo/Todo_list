@@ -1,5 +1,7 @@
 <template>
-    <div>Add item form</div>
+    <div class="addItem">
+        <input type="text" name="addItem" id="addItem"><font-awesome-icon icon="plus-square"/>
+    </div>
 </template>
 
 
