@@ -11928,7 +11928,7 @@ __webpack_require__.r(__webpack_exports__);
         item: this.item
       }).then(function (response) {
         if (response.status == 201) {
-          _this.item.name == "";
+          _this.item.name = "";
 
           _this.$emit('reloadlist');
         }
