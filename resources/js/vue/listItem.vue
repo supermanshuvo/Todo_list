@@ -30,4 +30,10 @@ export default {
     justify-content: center;
     align-items: center;
 }
+.trashcan{
+    background-color: #e6e6e6;
+    border: none;
+    color: #ff0000;
+    outline: none;
+}
 </style>
