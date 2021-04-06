@@ -11929,6 +11929,8 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         if (response.status == 201) {
           _this.item.name == "";
+
+          _this.$emit('reloadlist');
         }
       })["catch"](function (error) {
         console.log(error);
@@ -11952,9 +11954,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _addItemForm__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addItemForm */ "./resources/js/vue/addItemForm.vue");
 /* harmony import */ var _listView_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./listView.vue */ "./resources/js/vue/listView.vue");
-//
-//
-//
 //
 //
 //
@@ -30188,7 +30187,13 @@ var render = function() {
         [
           _c("h2", { attrs: { id: "title" } }, [_vm._v("Todo List")]),
           _vm._v(" "),
-          _c("add-item-form")
+          _c("add-item-form", {
+            on: {
+              reloadlist: function($event) {
+                return _vm.getList()
+              }
+            }
+          })
         ],
         1
       ),
