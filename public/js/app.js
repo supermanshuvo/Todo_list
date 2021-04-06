@@ -12032,6 +12032,17 @@ __webpack_require__.r(__webpack_exports__);
       })["catch"](function (error) {
         console.log(error);
       });
+    },
+    removeItem: function removeItem() {
+      var _this2 = this;
+
+      axios["delete"]('api/item/' + this.item.id).then(function (response) {
+        if (response.status == 200) {
+          _this2.$emit('itemchanged');
+        }
+      })["catch"](function (error) {
+        console.log(error);
+      });
     }
   }
 });
