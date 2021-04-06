@@ -1,11 +1,13 @@
 <template>
-    <div>
-        List item
+    <div class="item">
+        <input type="checkbox" @change="updateCheck()" v-model="item.completed">
+        <span :class="[item.completed ? 'completed':'','itemText']"
+        >{{ item.name}}</span>
     </div>
 </template>
 
 <script>
 export default {
-    
+    props:['item']
 }
 </script>
