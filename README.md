@@ -1,4 +1,4 @@
-# Contact_App
+# To-do List
 
 ##Windows users:
 - Download wamp: http://www.wampserver.com/en/
